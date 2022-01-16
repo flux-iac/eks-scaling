@@ -1,0 +1,17 @@
+---
+apiVersion: infra.contrib.fluxcd.io/v1alpha1
+kind: Terraform
+metadata:
+  name: tf-controller-ng-cc5a1ac4
+  namespace: flux-system
+spec:
+  interval: 5m
+  path: ./_artifacts/30-terraform
+  approvePlan: "auto"
+  varsFrom:
+    kind: Secret
+    name: aws-vars
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
