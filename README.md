@@ -25,7 +25,7 @@ kubectl create secret \
   generic tfstate-default-${NAME} \
   --from-file=tfstate=terraform.tfstate.gz \
   --dry-run=client -o=yaml \
-  yq e '.metadata.annotations["encoding"]="gzip"' - > tfstate-default-${NAME}.yaml
+  | yq e '.metadata.annotations["encoding"]="gzip"' - > tfstate-default-${NAME}.yaml
   
 kubectl apply -f tfstate-default-${NAME}.yaml
 ```
