@@ -1,11 +1,11 @@
-# TF-controller demo: A self-managed EKS
+# TF-controller demo: GitOps EKS nodegroup
 
-This is a TF-controller example to demonstrate manually scaling of a EKS cluster.
+This is a TF-controller example to demonstrate how to GitOps the nodegroup of an existing EKS cluster.
 
 ### Initial seed the imported `TFSTATE`
 
 The cluster was created by EKSctl. Then the `terraform import` command was used to partially extract the node group resource of the cluster. 
-The node group definition was store here as a Terrform file.
+The node group definition was stored here in this repo as a Terrform file.
 
 ```shell
 terraform init
