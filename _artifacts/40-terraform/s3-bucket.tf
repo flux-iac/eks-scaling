@@ -30,6 +30,7 @@ resource "aws_s3_bucket" "my-tfc-private-bucket" {
   tags = {
     Name        = "My private bucket"
     Environment = "Dev"
+    NewTag      = "New tag"
   }
 
 }
