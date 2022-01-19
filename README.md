@@ -17,7 +17,7 @@ terraform plan -out tfplan
 ```
 
 If there's no change, prepare the initial tfstate secret using the following step.
-```
+```shell
 gzip terraform.tfstate
 
 NAME=tf-controller-ng-cc5a1ac4
