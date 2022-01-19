@@ -1,0 +1,17 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: s3-bucket-ks
+  namespace: flux-system
+spec:
+  timeout: 2m
+  path: ./_artifacts/40-tf-s3-bucket
+  interval: 5m
+  prune: true
+  force: false
+  sourceRef:
+    name: flux-system
+    kind: GitRepository
+  dependsOn:
+  - name: tf-controller-deploy

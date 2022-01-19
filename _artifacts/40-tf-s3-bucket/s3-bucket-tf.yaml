@@ -1,0 +1,22 @@
+---
+apiVersion: infra.contrib.fluxcd.io/v1alpha1
+kind: Terraform
+metadata:
+  name: s3-bucket
+  namespace: flux-system
+spec:
+  interval: 5m
+  path: ./_artifacts/40-terraform
+  approvePlan: "auto"
+  backendConfig:
+    disable: true
+  cliConfigSecretRef:
+    name: tfc-cli-config
+    namespace: flux-system    
+  varsFrom:
+    kind: Secret
+    name: aws-vars
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
