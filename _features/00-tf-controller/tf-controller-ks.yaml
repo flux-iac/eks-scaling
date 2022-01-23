@@ -2,31 +2,14 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: tf-controller-crds
+  name: tf-controller
   namespace: flux-system
 spec:
   timeout: 2m
-  path: ./_artifacts/00-tf-controller-crds
+  path: ./_artifacts/00-tf-controller
   interval: 5m
   prune: true
   force: false
   sourceRef:
     name: flux-system
     kind: GitRepository
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: tf-controller-deploy
-  namespace: flux-system
-spec:
-  timeout: 2m
-  path: ./_artifacts/10-tf-controller-deploy
-  interval: 5m
-  prune: true
-  force: false
-  sourceRef:
-    name: flux-system
-    kind: GitRepository
-  dependsOn:
-  - name: tf-controller-crds

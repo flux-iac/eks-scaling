@@ -6,10 +6,10 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  path: ./_artifacts/30-terraform
+  path: ./_artifacts/20-zz-terraform
   approvePlan: "auto"
   varsFrom:
-    kind: Secret
+  - kind: Secret
     name: aws-vars
   sourceRef:
     kind: GitRepository

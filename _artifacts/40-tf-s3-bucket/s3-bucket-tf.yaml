@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 2m
-  path: ./_artifacts/40-terraform
+  path: ./_artifacts/40-zz-terraform
   approvePlan: "auto"
   backendConfig:
     disable: true
@@ -14,7 +14,7 @@ spec:
     name: tfc-cli-config
     namespace: flux-system    
   varsFrom:
-    kind: Secret
+  - kind: Secret
     name: aws-vars
   sourceRef:
     kind: GitRepository

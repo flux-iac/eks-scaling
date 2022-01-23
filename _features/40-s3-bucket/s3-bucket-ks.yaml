@@ -14,4 +14,4 @@ spec:
     name: flux-system
     kind: GitRepository
   dependsOn:
-  - name: tf-controller-deploy
+  - name: tf-controller

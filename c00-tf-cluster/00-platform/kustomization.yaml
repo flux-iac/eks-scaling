@@ -6,5 +6,5 @@ metadata:
     cluster: c00-tf-cluster
 resources:
 - ../../_features/00-tf-controller/tf-controller-ks.yaml
-- ../../_features/10-infra/infra-ks.yaml
+- ../../_features/20-tf-ekz-nodegroup/tf-ekz-nodegroup-ks.yaml
 - ../../_features/40-s3-bucket/s3-bucket-ks.yaml
