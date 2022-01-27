@@ -7,5 +7,5 @@ metadata:
 resources:
 - ../../_features/00-tf-controller/tf-controller-ks.yaml
 - ../../_features/20-tf-eks-nodegroup/tf-eks-nodegroup-ks.yaml
-- ../../_features/30-tfc-helloworld/tfc-helloworld.yaml
+- ../../_features/30-tfc-helloworld/tfc-helloworld-ks.yaml
 - ../../_features/40-s3-bucket/s3-bucket-ks.yaml
