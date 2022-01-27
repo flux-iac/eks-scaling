@@ -2,23 +2,25 @@
 apiVersion: infra.contrib.fluxcd.io/v1alpha1
 kind: Terraform
 metadata:
-  name: s3-bucket
+  name: tfc-helloworld
   namespace: flux-system
 spec:
-  interval: 10m
-  path: ./_artifacts/40-zz-terraform
-  approvePlan: "auto"
+  interval: 3m
+  path: ./_artifacts/30-zz-terraform
+  approvePlan: auto
   backendConfig:
     disable: true
   cliConfigSecretRef:
     name: tfc-cli-config
-    namespace: flux-system    
-  varsFrom:
-  - kind: Secret
-    name: aws-vars
-  - kind: Secret
-    name: tfc-helloworld-output
+    namespace: flux-system
+  vars:
+  - name: subject
+    value: "Terraform Cloud"
   sourceRef:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
+  writeOutputsToSecret:
+		name: "tfc-helloworld-output",
+    outputs:
+    - greeting

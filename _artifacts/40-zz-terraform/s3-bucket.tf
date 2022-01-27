@@ -17,6 +17,7 @@ terraform {
 }
 
 variable "region" { }
+variable "greeting" { }
 
 provider "aws" {
   region = var.region
@@ -30,6 +31,7 @@ resource "aws_s3_bucket" "my-tfc-private-bucket" {
   tags = {
     Name        = "My private bucket"
     Environment = "Demo"
+    Greeting    = "${var.greeting}"
   }
 
 }
