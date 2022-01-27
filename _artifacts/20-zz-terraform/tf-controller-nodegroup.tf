@@ -1,3 +1,7 @@
+# This TF file was extracted from the existing cluster
+# with `terraform import` command
+# and manually edited.
+
 terraform {
   required_providers {
     aws = {
