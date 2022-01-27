@@ -21,6 +21,6 @@ spec:
     name: flux-system
     namespace: flux-system
   writeOutputsToSecret:
-		name: "tfc-helloworld-output",
+		name: tfc-helloworld-output
     outputs:
     - greeting
