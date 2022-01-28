@@ -20,7 +20,7 @@ provider "aws" {
 
 locals {
   # cluster size
-  cluster_size    = 3
+  cluster_size    = 2
 
   # don't touch it
   cluster_name    = "tf-controller"
