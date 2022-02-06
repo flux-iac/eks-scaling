@@ -5,7 +5,7 @@ metadata:
   name: tfc-helloworld
   namespace: flux-system
 spec:
-  interval: 3m
+  interval: 30m
   path: ./_artifacts/30-zz-terraform
   approvePlan: auto
   backendConfig:
