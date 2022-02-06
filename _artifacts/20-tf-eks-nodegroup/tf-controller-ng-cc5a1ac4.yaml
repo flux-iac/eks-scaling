@@ -5,7 +5,7 @@ metadata:
   name: tf-controller-ng-cc5a1ac4
   namespace: flux-system
 spec:
-  interval: 5m
+  interval: 30m
   path: ./_artifacts/20-zz-terraform
   approvePlan: "auto"
   varsFrom:
