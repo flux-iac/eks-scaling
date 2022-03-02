@@ -9,7 +9,7 @@ spec:
   path: ./_artifacts/00-tf-controller
   interval: 5m
   prune: true
-  force: false
+  force: true
   sourceRef:
     name: flux-system
     kind: GitRepository
