@@ -8,6 +8,7 @@ spec:
   interval: 30m
   path: ./_artifacts/30-zz-terraform
   approvePlan: auto
+  alwaysCleanupRunnerPod: true
   backendConfig:
     disable: true
   cliConfigSecretRef:
