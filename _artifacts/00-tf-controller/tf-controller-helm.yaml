@@ -5,7 +5,7 @@ metadata:
   name: tf-controller
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 1h0s
   url: https://weaveworks.github.io/tf-controller/
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
@@ -21,7 +21,7 @@ spec:
         kind: HelmRepository
         name: tf-controller
       version: '>=0.1.5'
-  interval: 2m0s
+  interval: 1h0s
   releaseName: tf-controller
   targetNamespace: flux-system
   install:
