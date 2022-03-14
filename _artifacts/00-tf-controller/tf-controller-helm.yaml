@@ -30,4 +30,7 @@ spec:
     crds: CreateReplace
   values:
     image:
-      tag: v0.9.0-rc.5
+      tag: fix-getconn-tlscert-1f59cf06
+    runner:
+      image:
+        tag: fix-getconn-tlscert-1f59cf06
