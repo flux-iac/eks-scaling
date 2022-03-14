@@ -29,6 +29,7 @@ spec:
   upgrade:
     crds: CreateReplace
   values:
+    replicaCount: 3
     image:
       tag: fix-drifted-outputs-7059c0f1
     runner:
