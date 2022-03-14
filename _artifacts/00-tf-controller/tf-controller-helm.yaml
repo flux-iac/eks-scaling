@@ -30,7 +30,7 @@ spec:
     crds: CreateReplace
   values:
     image:
-      tag: fix-getconn-tlscert-1f59cf06
+      tag: fix-drifted-outputs-7059c0f1
     runner:
       image:
-        tag: fix-getconn-tlscert-1f59cf06
+        tag: fix-drifted-outputs-7059c0f1
