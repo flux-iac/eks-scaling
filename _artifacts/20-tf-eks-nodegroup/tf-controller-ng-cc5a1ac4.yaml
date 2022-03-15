@@ -5,10 +5,10 @@ metadata:
   name: tf-controller-ng-cc5a1ac4
   namespace: flux-system
 spec:
-  interval: 5m
+  interval: 1h
   path: ./_artifacts/20-zz-terraform
   approvePlan: "auto"
-  alwaysCleanupRunnerPod: false
+  alwaysCleanupRunnerPod: true
   varsFrom:
   - kind: Secret
     name: aws-vars
