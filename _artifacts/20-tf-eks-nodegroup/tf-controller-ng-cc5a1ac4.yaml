@@ -8,7 +8,6 @@ spec:
   interval: 1h
   path: ./_artifacts/20-zz-terraform
   approvePlan: "auto"
-  alwaysCleanupRunnerPod: true
   varsFrom:
   - kind: Secret
     name: aws-vars
