@@ -31,7 +31,7 @@ spec:
   values:
     replicaCount: 1
     image:
-      tag: v0.9.0
+      tag: wait-pod-termiate-4ca31738
     runner:
       image:
-        tag: v0.9.0
+        tag: wait-pod-termiate-4ca31738
