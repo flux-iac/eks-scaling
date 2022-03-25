@@ -20,7 +20,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: tf-controller
-      version: '>=0.2.3'
+      version: '>=0.2.4'
   interval: 1h0s
   releaseName: tf-controller
   targetNamespace: flux-system
@@ -31,7 +31,7 @@ spec:
   values:
     replicaCount: 1
     image:
-      tag: wait-pod-termiate-4ca31738
+      tag: v0.9.2
     runner:
       image:
-        tag: wait-pod-termiate-4ca31738
+        tag: v0.9.2
