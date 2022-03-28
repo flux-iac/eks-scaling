@@ -20,7 +20,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: tf-controller
-      version: '>=0.2.4'
+      version: '>=0.2.5'
   interval: 1h0s
   releaseName: tf-controller
   targetNamespace: flux-system
@@ -31,7 +31,7 @@ spec:
   values:
     replicaCount: 1
     image:
-      tag: fix-runner-pod-pointer
+      tag: v0.9.3
     runner:
       image:
-        tag: fix-runner-pod-pointer
+        tag: v0.9.3
